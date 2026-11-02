@@ -1,0 +1,877 @@
+/**
+ * Forest & Stone Design System (v1.2)
+ * Strictly Pure Brandkit Tokens — Zero Gradients, Zero Clutter Animations
+ * Optimized for Mobile (390px), Tablet (768px), and Desktop (1280px/1440px)
+ */
+
+:root {
+  /* ==========================================================================
+     STRICT BRAND PALETTE (ONLY these colors permitted)
+     ========================================================================== */
+  --brand-ink: #0F1F17;
+  --brand-forest: #1E3A2E;
+  --brand-moss: #3E5A3F;
+  --brand-sage: #6B7F67;
+  --brand-stone: #C7CBB8;
+  --brand-charcoal: #3D4337;
+  --page-bg: #F3F3EC;
+  --surface: #FFFFFF;
+  --text-primary: #263027;
+  --text-secondary: #526053;
+  --border: #D8DCD0;
+  --border-subtle: #E6EADF;
+
+  /* Strict Brandkit Status Colors */
+  --status-active-bg: #E2EAE0;
+  --status-active-text: #1E3A2E;
+  --status-pending-bg: #F6F0DB;
+  --status-pending-text: #7A5B18;
+  --status-inreview-bg: #E5EDF4;
+  --status-inreview-text: #2A527A;
+  --status-complete-bg: #E0EFE5;
+  --status-complete-text: #1B5E20;
+  --status-action-bg: #FDE8E8;
+  --status-action-text: #9B2C2C;
+
+  /* ==========================================================================
+     Radius Scale
+     ========================================================================== */
+  --radius-tag: 4px;
+  --radius-button: 9px;
+  --radius-toast: 12px;
+  --radius-card: 16px;
+  --radius-dialog: 18px;
+  --radius-panel: 20px;
+  --radius-pill: 999px;
+
+  /* ==========================================================================
+     Typography & Shadows
+     ========================================================================== */
+  --font-family: 'Poppins', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --focus-ring: 0 0 0 2px var(--page-bg), 0 0 0 4px var(--brand-sage);
+  --shadow-sm: 0 1px 3px rgba(15, 31, 23, 0.05);
+  --shadow-card: 0 4px 16px rgba(15, 31, 23, 0.04);
+  --shadow-elevated: 0 8px 24px rgba(15, 31, 23, 0.08);
+
+  /* Legacy variable overrides to kill all neon/pink/orange/gradients */
+  --ztc-family-font1: var(--font-family) !important;
+  --ztc-text-text-1: #FFFFFF !important;
+  --ztc-text-text-2: var(--brand-ink) !important;
+  --ztc-text-text-3: var(--text-secondary) !important;
+  --ztc-text-text-4: var(--brand-forest) !important;
+  --ztc-text-text-5: var(--brand-forest) !important;
+  --ztc-text-text-6: var(--brand-forest) !important;
+  --ztc-text-text-7: var(--status-active-bg) !important;
+  --ztc-text-text-8: var(--page-bg) !important;
+  --ztc-text-text-9: var(--status-active-bg) !important;
+  --ztc-text-text-10: var(--page-bg) !important;
+  --ztc-text-text-11: var(--brand-sage) !important;
+  --ztc-text-text-12: var(--brand-ink) !important;
+  --ztc-text-text-13: var(--brand-forest) !important;
+  --ztc-text-text-14: var(--brand-forest) !important;
+  --ztc-text-text-15: var(--brand-forest) !important;
+  --ztc-text-text-16: var(--brand-forest) !important;
+  --ztc-text-text-17: var(--brand-forest) !important;
+  --ztc-text-text-18: var(--brand-ink) !important;
+
+  --ztc-bg-bg-1: var(--brand-forest) !important;
+  --ztc-bg-bg-2: #E8ECE2 !important;
+  --ztc-bg-bg-3: var(--brand-stone) !important;
+  --ztc-bg-bg-4: var(--page-bg) !important;
+  --ztc-bg-bg-5: #D8DFD2 !important;
+  --ztc-bg-bg-7: var(--status-pending-bg) !important;
+  --ztc-bg-bg-8: var(--status-complete-bg) !important;
+  --ztc-bg-bg-10: var(--brand-forest) !important;
+  --ztc-bg-bg-11: var(--brand-charcoal) !important;
+  --ztc-bg-bg-12: var(--brand-forest) !important;
+  --ztc-bg-bg-15: var(--page-bg) !important;
+  --ztc-bg-bg-18: var(--brand-ink) !important;
+
+  --ztc-brand-gradient: var(--brand-forest) !important;
+}
+
+/* ==========================================================================
+   KILL ALL DISRUPTIVE ANIMATIONS & FORCE SMOOTH SCROLLING
+   ========================================================================== */
+html {
+  scroll-behavior: smooth !important;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-family) !important;
+  background-color: var(--page-bg) !important;
+  color: var(--text-primary) !important;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Eliminate all keyframe animations, floating elements, spinning elements, and pulses */
+*, *::before, *::after {
+  animation-duration: 0.001s !important;
+  animation-iteration-count: 1 !important;
+  animation-name: none !important;
+}
+
+.keyframe5,
+.aniamtion-key-1,
+.aniamtion-key-2,
+.elements1,
+.elements4,
+.elements5,
+.elements12,
+.elements14,
+.elements27,
+.star1,
+.star2 {
+  animation: none !important;
+  transform: none !important;
+  display: none !important;
+}
+
+/* Make AOS immediately visible with no delayed fade/bounce popping */
+[data-aos] {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+/* Smooth, subtle transitions for hover states */
+a, button, .fs-card, .header-btn21, .header-btn1 {
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease !important;
+}
+
+/* ==========================================================================
+   Typography (Natural, Humanized, High-Contrast)
+   ========================================================================== */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family) !important;
+  color: var(--brand-ink) !important;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+p {
+  font-family: var(--font-family) !important;
+  color: var(--text-secondary);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--brand-forest);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--brand-moss);
+}
+
+/* ==========================================================================
+   Buttons (Pure Solid Colors — ZERO Gradients)
+   ========================================================================== */
+.header-btn21,
+.header-btn1,
+.header-btn2,
+.header-btn3,
+.fs-btn-primary {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  font-family: var(--font-family) !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  line-height: 1 !important;
+  color: #FFFFFF !important;
+  background: var(--brand-forest) !important;
+  background-image: none !important;
+  border-radius: var(--radius-button) !important;
+  padding: 12px 20px !important;
+  border: 1px solid var(--brand-forest) !important;
+  cursor: pointer !important;
+  box-shadow: var(--shadow-sm) !important;
+  text-decoration: none !important;
+  position: relative !important;
+}
+
+.header-btn21::after,
+.header-btn1::after,
+.header-btn2::after,
+.header-btn3::after,
+.fs-btn-primary::after {
+  display: none !important;
+}
+
+.header-btn21:hover,
+.header-btn1:hover,
+.header-btn2:hover,
+.header-btn3:hover,
+.fs-btn-primary:hover {
+  background: var(--brand-moss) !important;
+  border-color: var(--brand-moss) !important;
+  color: #FFFFFF !important;
+  transform: none !important;
+}
+
+.header-btn21:focus-visible,
+.header-btn1:focus-visible,
+.fs-btn-primary:focus-visible {
+  outline: none !important;
+  box-shadow: var(--focus-ring) !important;
+}
+
+.header-btn21.btn2,
+.fs-btn-outline {
+  background: #FFFFFF !important;
+  background-image: none !important;
+  color: var(--brand-forest) !important;
+  border: 1px solid var(--border) !important;
+}
+
+.header-btn21.btn2:hover,
+.fs-btn-outline:hover {
+  background: #F3F5EE !important;
+  border-color: var(--brand-sage) !important;
+  color: var(--brand-ink) !important;
+  transform: none !important;
+}
+
+.header-btn21 i,
+.header-btn1 i {
+  font-size: 11px !important;
+  transform: none !important;
+}
+
+.header-btn1 span,
+.header-btn21 span {
+  background: transparent !important;
+  color: inherit !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  width: auto !important;
+  height: auto !important;
+}
+
+/* ==========================================================================
+   Header & Navigation
+   ========================================================================== */
+.header-area.homepage13 {
+  background: #FFFFFF !important;
+  background-image: none !important;
+  border-bottom: 1px solid var(--border) !important;
+  box-shadow: 0 1px 3px rgba(15, 31, 23, 0.04) !important;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 100 !important;
+}
+
+.header-area.homepage13 .header-elements .main-menu ul li a {
+  font-family: var(--font-family) !important;
+  color: var(--text-primary) !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  padding: 20px 14px !important;
+}
+
+.header-area.homepage13 .header-elements .main-menu ul li a:hover,
+.header-area.homepage13 .header-elements .main-menu ul li a.active {
+  color: var(--brand-forest) !important;
+}
+
+.header-area.homepage13 .header-elements .main-menu ul li ul.dropdown-padding {
+  background: #FFFFFF !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius-toast) !important;
+  box-shadow: var(--shadow-card) !important;
+  padding: 8px !important;
+}
+
+.header-area.homepage13 .header-elements .main-menu ul li ul.dropdown-padding li a {
+  padding: 8px 14px !important;
+  font-size: 13px !important;
+  color: var(--text-primary) !important;
+  border-radius: var(--radius-button) !important;
+}
+
+.header-area.homepage13 .header-elements .main-menu ul li ul.dropdown-padding li a:hover {
+  background: #F4F6F0 !important;
+  color: var(--brand-forest) !important;
+}
+
+.mobile-header {
+  background: #FFFFFF !important;
+  border-bottom: 1px solid var(--border) !important;
+  padding: 12px 0 !important;
+}
+
+.mobile-sidebar {
+  background: #FFFFFF !important;
+}
+
+/* ==========================================================================
+   Cards & Surfaces
+   ========================================================================== */
+.fs-card,
+.service13-boxarea,
+.project13-boxrea,
+.testimonial13-boxrea,
+.team13-boxarea,
+.blog-auhtor-boxarea,
+.pricing-boxarea,
+.counter-box,
+.testimonial-boxarea {
+  background: var(--surface) !important;
+  background-image: none !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius-card) !important;
+  box-shadow: var(--shadow-card) !important;
+  overflow: hidden !important;
+}
+
+.fs-card:hover,
+.service13-boxarea:hover,
+.project13-boxrea:hover,
+.pricing-boxarea:hover {
+  border-color: var(--brand-sage) !important;
+  transform: none !important;
+  box-shadow: var(--shadow-elevated) !important;
+}
+
+/* Tagline Pills */
+.hero13-header.heading19 h5,
+.heading2 h5,
+.heading9 h5,
+.heading20 h5 {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  background: #E5EADF !important;
+  background-image: none !important;
+  color: var(--brand-forest) !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.04em !important;
+  padding: 5px 12px !important;
+  border-radius: var(--radius-pill) !important;
+  border: 1px solid var(--border) !important;
+  margin-bottom: 12px !important;
+}
+
+/* ==========================================================================
+   Badges (Strict Pill Radius 999px)
+   ========================================================================== */
+.badge-active {
+  display: inline-flex !important;
+  align-items: center !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  padding: 4px 12px !important;
+  border-radius: var(--radius-pill) !important;
+  background-color: var(--status-active-bg) !important;
+  color: var(--status-active-text) !important;
+  border: 1px solid #C4D6C0 !important;
+}
+
+.badge-pending {
+  display: inline-flex !important;
+  align-items: center !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  padding: 4px 12px !important;
+  border-radius: var(--radius-pill) !important;
+  background-color: var(--status-pending-bg) !important;
+  color: var(--status-pending-text) !important;
+  border: 1px solid #E6D9B6 !important;
+}
+
+.badge-in-review {
+  display: inline-flex !important;
+  align-items: center !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  padding: 4px 12px !important;
+  border-radius: var(--radius-pill) !important;
+  background-color: var(--status-inreview-bg) !important;
+  color: var(--status-inreview-text) !important;
+  border: 1px solid #CADAE6 !important;
+}
+
+.badge-complete {
+  display: inline-flex !important;
+  align-items: center !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  padding: 4px 12px !important;
+  border-radius: var(--radius-pill) !important;
+  background-color: var(--status-complete-bg) !important;
+  color: var(--status-complete-text) !important;
+  border: 1px solid #BFE0CA !important;
+}
+
+.badge-action-needed {
+  display: inline-flex !important;
+  align-items: center !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  padding: 4px 12px !important;
+  border-radius: var(--radius-pill) !important;
+  background-color: var(--status-action-bg) !important;
+  color: var(--status-action-text) !important;
+  border: 1px solid #F5C6C6 !important;
+}
+
+/* ==========================================================================
+   KPI Cards
+   ========================================================================== */
+.fs-kpi-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+}
+
+.fs-kpi-header {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+}
+
+.fs-kpi-value {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--brand-ink);
+  margin-bottom: 6px;
+}
+
+.fs-kpi-trend {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--brand-forest);
+  background: var(--status-active-bg);
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+}
+
+/* Star reviews */
+.fa-star {
+  color: var(--brand-moss) !important;
+}
+
+/* ==========================================================================
+   Forms & Controls
+   ========================================================================== */
+.contact-main-inner-area input,
+.contact-main-inner-area textarea,
+.contact-main-inner-area select,
+.footer13-section-area form input,
+input.fs-input,
+textarea.fs-input {
+  width: 100% !important;
+  background: var(--surface) !important;
+  background-image: none !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius-button) !important;
+  padding: 10px 14px !important;
+  font-family: var(--font-family) !important;
+  font-size: 14px !important;
+  color: var(--text-primary) !important;
+  outline: none !important;
+}
+
+.contact-main-inner-area input:focus,
+.contact-main-inner-area textarea:focus,
+input.fs-input:focus,
+textarea.fs-input:focus {
+  border-color: var(--brand-sage) !important;
+  box-shadow: 0 0 0 3px rgba(107, 127, 103, 0.2) !important;
+}
+
+.fs-form-label {
+  font-family: var(--font-family);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+  display: block;
+}
+
+/* ==========================================================================
+   Inner Page Header Banners (SOLID Brand Forest / Ink — ZERO Gradients)
+   ========================================================================== */
+.about-header-area {
+  background: var(--brand-forest) !important;
+  background-image: none !important;
+  padding: 50px 0 45px 0 !important;
+  position: relative !important;
+  text-align: center !important;
+}
+
+.about-header-area .about-inner-header h1 {
+  font-size: 34px !important;
+  font-weight: 700 !important;
+  color: #FFFFFF !important;
+  margin-bottom: 8px !important;
+}
+
+.about-header-area .about-inner-header a {
+  color: var(--brand-stone) !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+}
+
+.about-header-area .about-inner-header a span {
+  color: #FFFFFF !important;
+}
+
+/* ==========================================================================
+   Accordion / FAQs
+   ========================================================================== */
+.accordion-item {
+  background: var(--surface) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius-toast) !important;
+  margin-bottom: 12px !important;
+  overflow: hidden !important;
+}
+
+.accordion-button {
+  font-family: var(--font-family) !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  color: var(--brand-ink) !important;
+  background: var(--surface) !important;
+  padding: 16px 20px !important;
+  box-shadow: none !important;
+}
+
+.accordion-button:not(.collapsed) {
+  color: var(--brand-forest) !important;
+  background: #F4F6F1 !important;
+  box-shadow: none !important;
+}
+
+.accordion-button:focus {
+  box-shadow: none !important;
+}
+
+.accordion-body {
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+  color: var(--text-secondary) !important;
+  padding: 16px 20px !important;
+}
+
+/* ==========================================================================
+   Call To Action Sections (SOLID Brand Forest — ZERO Gradients)
+   ========================================================================== */
+.cta13-section-area,
+.cta-section-area,
+.cta-header-area {
+  background: var(--brand-forest) !important;
+  background-image: none !important;
+  border-radius: var(--radius-panel) !important;
+  margin: 40px auto !important;
+  max-width: 90% !important;
+  padding: 44px 32px !important;
+  text-align: center !important;
+  color: #FFFFFF !important;
+}
+
+.cta13-section-area h2,
+.cta-section-area h2,
+.cta-header-area h2 {
+  color: #FFFFFF !important;
+  font-size: 28px !important;
+  line-height: 1.3 !important;
+  margin-bottom: 12px !important;
+}
+
+.cta13-section-area p,
+.cta-section-area p,
+.cta-header-area p {
+  color: var(--brand-stone) !important;
+  font-size: 14px !important;
+  max-width: 620px !important;
+  margin: 0 auto 24px auto !important;
+}
+
+.cta13-section-area .header-btn21 {
+  background: #FFFFFF !important;
+  color: var(--brand-forest) !important;
+  border-color: #FFFFFF !important;
+}
+
+.cta13-section-area .header-btn21:hover {
+  background: var(--brand-stone) !important;
+  color: var(--brand-ink) !important;
+}
+
+.cta13-section-area .header-btn21.btn2 {
+  background: transparent !important;
+  border: 1px solid var(--brand-stone) !important;
+  color: #FFFFFF !important;
+}
+
+.cta13-section-area .header-btn21.btn2:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* ==========================================================================
+   Footer (SOLID Brand Ink #0F1F17 — ZERO Gradients)
+   ========================================================================== */
+.footer13-section-area {
+  background: var(--brand-ink) !important;
+  background-image: none !important;
+  color: var(--brand-stone) !important;
+  padding: 50px 0 24px 0 !important;
+  border-top: 1px solid #1C2E23 !important;
+}
+
+.footer13-section-area .footer-logo-area p {
+  color: var(--brand-stone) !important;
+  font-size: 13px !important;
+}
+
+.footer13-section-area .footer-logo-area ul li a {
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: var(--brand-stone) !important;
+  border: 1px solid rgba(216, 220, 208, 0.15) !important;
+}
+
+.footer13-section-area .footer-logo-area ul li a:hover {
+  background: var(--brand-moss) !important;
+  color: #FFFFFF !important;
+  border-color: var(--brand-moss) !important;
+}
+
+.footer13-section-area .footer-logo-area1 h3,
+.footer13-section-area .footer-logo-area3 h3 {
+  color: #FFFFFF !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  margin-bottom: 14px !important;
+}
+
+.footer13-section-area .footer-logo-area1 ul li a {
+  color: var(--brand-stone) !important;
+  font-size: 13px !important;
+  padding: 4px 0 !important;
+}
+
+.footer13-section-area .footer-logo-area1 ul li a:hover {
+  color: #FFFFFF !important;
+}
+
+.footer13-section-area .footer-logo-area3 form input {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(216, 220, 208, 0.2) !important;
+  border-radius: var(--radius-button) !important;
+  color: #FFFFFF !important;
+  font-size: 13px !important;
+}
+
+.footer13-section-area .footer-logo-area3 form input::placeholder {
+  color: var(--brand-stone) !important;
+  opacity: 0.6 !important;
+}
+
+.footer13-section-area .copyright-area {
+  border-top: 1px solid rgba(216, 220, 208, 0.12) !important;
+  padding-top: 18px !important;
+  margin-top: 30px !important;
+}
+
+.footer13-section-area .copyright-area p,
+.footer13-section-area .copyright-area ul li a {
+  color: #8C968B !important;
+  font-size: 12px !important;
+}
+
+/* ==========================================================================
+   TIGHTENED VERTICAL PADDING & PAGE LENGTH REDUCTION
+   ========================================================================== */
+.sp1 { padding: 48px 0 !important; }
+.sp2 { padding: 44px 0 !important; }
+.sp5 { padding: 36px 0 !important; }
+.sp6 { padding: 44px 0 !important; }
+.sp8 { padding: 40px 0 !important; }
+.space16 { height: 12px !important; }
+.space20 { height: 16px !important; }
+.space24 { height: 18px !important; }
+.space32 { height: 22px !important; }
+.space40 { height: 28px !important; }
+.space50 { height: 32px !important; }
+.space60 { height: 36px !important; }
+.space-margin60 { margin-bottom: 32px !important; }
+
+/* ==========================================================================
+   RESPONSIVE ENHANCEMENTS: Tablet (768px - 1024px)
+   ========================================================================== */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .hero13-section-area {
+    padding: 50px 0 !important;
+  }
+  .hero13-header.heading19 h2 {
+    font-size: 38px !important;
+    line-height: 1.2 !important;
+  }
+  .hero13-header.heading19 p {
+    font-size: 15px !important;
+  }
+  .fs-card,
+  .service13-boxarea,
+  .project13-boxrea,
+  .pricing-boxarea {
+    padding: 22px !important;
+  }
+  .cta13-section-area,
+  .cta-section-area {
+    padding: 36px 24px !important;
+    max-width: 95% !important;
+  }
+}
+
+/* ==========================================================================
+   RESPONSIVE ENHANCEMENTS: Mobile (390px - 767px)
+   ========================================================================== */
+@media (max-width: 767px) {
+  .hero13-section-area {
+    padding: 36px 0 30px 0 !important;
+  }
+  .hero13-header.heading19 h2 {
+    font-size: 30px !important;
+    line-height: 1.25 !important;
+    margin-bottom: 12px !important;
+  }
+  .hero13-header.heading19 p {
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+  }
+  .hero13-header.heading19 .btn-area1 {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+  .header-btn21,
+  .header-btn1 {
+    width: 100% !important;
+    padding: 12px 18px !important;
+    font-size: 13px !important;
+    margin: 0 !important;
+  }
+  .header-btn21.btn2 {
+    margin-left: 0 !important;
+    margin-top: 6px !important;
+  }
+  .about-header-area {
+    padding: 36px 0 30px 0 !important;
+  }
+  .about-header-area .about-inner-header h1 {
+    font-size: 26px !important;
+  }
+  .fs-card,
+  .service13-boxarea,
+  .project13-boxrea,
+  .testimonial13-boxrea,
+  .pricing-boxarea {
+    padding: 18px !important;
+    margin-bottom: 16px !important;
+  }
+  .cta13-section-area,
+  .cta-section-area {
+    padding: 30px 18px !important;
+    max-width: 100% !important;
+    margin: 30px 15px !important;
+  }
+  .cta13-section-area h2,
+  .cta-section-area h2 {
+    font-size: 22px !important;
+  }
+  .cta13-section-area .btn-area1 {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+  }
+  .footer13-section-area {
+    padding: 36px 0 20px 0 !important;
+  }
+  .footer13-section-area .footer-logo-area1 {
+    margin-top: 20px !important;
+  }
+  .footer13-section-area .footer-logo-area3 {
+    margin-top: 24px !important;
+  }
+  .footer13-section-area .container {
+    max-width: 92% !important;
+  }
+}
+
+/* ==========================================================================
+   Accordion Fixes & Forest & Stone Clean Toggle Styling
+   ========================================================================== */
+.accordion-button::after {
+  display: none !important;
+}
+
+.accordion-item {
+  background: var(--surface) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 14px !important;
+  margin-bottom: 12px !important;
+  box-shadow: var(--shadow-sm) !important;
+  overflow: hidden !important;
+}
+
+.accordion-button {
+  font-family: var(--font-family) !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  color: var(--brand-ink) !important;
+  background: var(--surface) !important;
+  padding: 16px 20px !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.accordion-button:not(.collapsed) {
+  background: #F5F7F1 !important;
+  color: var(--brand-forest) !important;
+  border-bottom: 1px solid var(--border) !important;
+}
+
+.accordion-button:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.accordion-body {
+  font-size: 14px !important;
+  line-height: 1.65 !important;
+  color: var(--text-secondary) !important;
+  padding: 18px 22px !important;
+  background: var(--surface) !important;
+}
+
+/* Form Helper & Validation Text (Page 5 specification) */
+.fs-form-helper {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+
+.fs-form-error {
+  font-size: 12px;
+  color: var(--status-action-text);
+  margin-top: 4px;
+}

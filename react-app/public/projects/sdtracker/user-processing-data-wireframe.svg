@@ -1,0 +1,326 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 950" width="100%" height="100%" style="background:#090d16; font-family: 'Inter', system-ui, -apple-system, sans-serif;">
+  <defs>
+    <pattern id="diagGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#172033" stroke-width="1" />
+    </pattern>
+    <linearGradient id="primaryGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f97316" />
+      <stop offset="50%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#eab308" />
+    </linearGradient>
+    <linearGradient id="flowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f97316" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0.8" />
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#f59e0b" />
+    </marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#10b981" />
+    </marker>
+  </defs>
+
+  <!-- Background Grid -->
+  <rect width="1600" height="950" fill="#090d16" />
+  <rect width="1600" height="950" fill="url(#diagGrid)" opacity="0.8" />
+
+  <!-- Outer Blueprint Border -->
+  <rect x="24" y="24" width="1552" height="902" rx="16" fill="none" stroke="#1e293b" stroke-width="2" />
+
+  <!-- Header Header Tag -->
+  <g transform="translate(48, 54)">
+    <text x="0" y="0" fill="#f59e0b" font-size="12" font-weight="700" letter-spacing="2" font-family="monospace">END-USER TO APPLICATION PROCESSING TO DATA WIREFRAME</text>
+    <text x="640" y="0" fill="#64748b" font-size="11" font-family="monospace">TOPOLOGY: 4-STAGE PIPELINE DATAFLOW ARCHITECTURE</text>
+    <text x="1300" y="0" fill="#10b981" font-size="11" font-family="monospace">● SECURE &amp; AUDITED</text>
+  </g>
+
+  <!-- ========================================================================= -->
+  <!-- 4 PRIMARY PROCESSING COLUMNS / ZONES                                      -->
+  <!-- ========================================================================= -->
+
+  <!-- ========================================== -->
+  <!-- ZONE 01: END-USER TOUCHPOINTS (X: 48, Width: 330) -->
+  <!-- ========================================== -->
+  <g transform="translate(48, 80)">
+    <!-- Zone Container Box -->
+    <rect width="330" height="810" rx="14" fill="#0d1424" stroke="#334155" stroke-width="1.5" />
+    
+    <!-- Zone Header -->
+    <rect width="330" height="46" rx="14" fill="#172238" />
+    <rect y="36" width="330" height="10" fill="#172238" />
+    <line x1="0" y1="46" x2="330" y2="46" stroke="#334155" stroke-width="1" />
+    <text x="16" y="28" fill="#f8fafc" font-size="13" font-weight="800">STAGE 01: END USERS</text>
+    <rect x="235" y="13" width="80" height="20" rx="4" fill="#1e293b" />
+    <text x="275" y="27" fill="#f59e0b" font-size="10" font-weight="700" text-anchor="middle">FIELD USERS</text>
+
+    <!-- Zone Description -->
+    <text x="16" y="70" fill="#94a3b8" font-size="11" font-weight="500">Multi-Role Stakeholders Across Sites</text>
+
+    <!-- Stakeholder Cards -->
+    <!-- Card 1: Frontline Staff -->
+    <g transform="translate(16, 90)">
+      <rect width="298" height="130" rx="10" fill="#131c2e" stroke="#1e293b" stroke-width="1" />
+      <circle cx="28" cy="28" r="14" fill="url(#primaryGrad2)" />
+      <text x="28" y="33" fill="#ffffff" font-size="12" font-weight="800" text-anchor="middle">FS</text>
+      <text x="52" y="26" fill="#f8fafc" font-size="13" font-weight="700">Frontline Support Staff</text>
+      <text x="52" y="40" fill="#94a3b8" font-size="11">Mobile Tablet / Handheld Browser</text>
+      <line x1="16" y1="56" x2="282" y2="56" stroke="#1e293b" stroke-width="1" />
+      <text x="16" y="76" fill="#cbd5e1" font-size="11">• Logs daily resident welfare checks</text>
+      <text x="16" y="94" fill="#cbd5e1" font-size="11">• Completes room check-in inspections</text>
+      <text x="16" y="112" fill="#cbd5e1" font-size="11">• Submits urgent CAT 1 maintenance flags</text>
+    </g>
+
+    <!-- Card 2: Property & Operations Managers -->
+    <g transform="translate(16, 236)">
+      <rect width="298" height="130" rx="10" fill="#131c2e" stroke="#1e293b" stroke-width="1" />
+      <circle cx="28" cy="28" r="14" fill="#3b82f6" />
+      <text x="28" y="33" fill="#ffffff" font-size="12" font-weight="800" text-anchor="middle">PM</text>
+      <text x="52" y="26" fill="#f8fafc" font-size="13" font-weight="700">Property &amp; Site Leads</text>
+      <text x="52" y="40" fill="#94a3b8" font-size="11">Desktop Workstation &amp; Laptop</text>
+      <line x1="16" y1="56" x2="282" y2="56" stroke="#1e293b" stroke-width="1" />
+      <text x="16" y="76" fill="#cbd5e1" font-size="11">• Room allocations &amp; bed management</text>
+      <text x="16" y="94" fill="#cbd5e1" font-size="11">• Reconciles supplier delivery notes</text>
+      <text x="16" y="112" fill="#cbd5e1" font-size="11">• Approves contractor repair sign-offs</text>
+    </g>
+
+    <!-- Card 3: Maintenance Contractors -->
+    <g transform="translate(16, 382)">
+      <rect width="298" height="130" rx="10" fill="#131c2e" stroke="#1e293b" stroke-width="1" />
+      <circle cx="28" cy="28" r="14" fill="#10b981" />
+      <text x="28" y="33" fill="#ffffff" font-size="12" font-weight="800" text-anchor="middle">MC</text>
+      <text x="52" y="26" fill="#f8fafc" font-size="13" font-weight="700">Contractors &amp; Engineers</text>
+      <text x="52" y="40" fill="#94a3b8" font-size="11">Mobile Field Phone Web App</text>
+      <line x1="16" y1="56" x2="282" y2="56" stroke="#1e293b" stroke-width="1" />
+      <text x="16" y="76" fill="#cbd5e1" font-size="11">• Receives emergency 4h SLA alerts</text>
+      <text x="16" y="94" fill="#cbd5e1" font-size="11">• Uploads photo evidence on-site</text>
+      <text x="16" y="112" fill="#cbd5e1" font-size="11">• Captures digital completion signature</text>
+    </g>
+
+    <!-- Card 4: Executive Leadership & Auditors -->
+    <g transform="translate(16, 528)">
+      <rect width="298" height="130" rx="10" fill="#131c2e" stroke="#1e293b" stroke-width="1" />
+      <circle cx="28" cy="28" r="14" fill="#8b5cf6" />
+      <text x="28" y="33" fill="#ffffff" font-size="12" font-weight="800" text-anchor="middle">EX</text>
+      <text x="52" y="26" fill="#f8fafc" font-size="13" font-weight="700">Executives &amp; Auditors</text>
+      <text x="52" y="40" fill="#94a3b8" font-size="11">Executive Command Center / iPad</text>
+      <line x1="16" y1="56" x2="282" y2="56" stroke="#1e293b" stroke-width="1" />
+      <text x="16" y="76" fill="#cbd5e1" font-size="11">• Portfolio-wide capacity analytics</text>
+      <text x="16" y="94" fill="#cbd5e1" font-size="11">• Multi-tier finance payment authorization</text>
+      <text x="16" y="112" fill="#cbd5e1" font-size="11">• One-click Home Office report exports</text>
+    </g>
+
+    <!-- Protocol Tag -->
+    <g transform="translate(16, 730)">
+      <rect width="298" height="50" rx="8" fill="#131d30" stroke="#1e293b" stroke-width="1" />
+      <text x="14" y="24" fill="#94a3b8" font-size="10" font-weight="700">CLIENT ACCESS PROTOCOL:</text>
+      <text x="14" y="40" fill="#10b981" font-size="11" font-family="monospace">HTTPS / WSS • Responsive UI (375px+)</text>
+    </g>
+  </g>
+
+  <!-- Flow Arrow: Zone 1 to Zone 2 -->
+  <path d="M 378 485 L 428 485" fill="none" stroke="#f59e0b" stroke-width="2.5" marker-end="url(#arrow)" />
+
+  <!-- ========================================== -->
+  <!-- ZONE 02: CLIENT APPLICATION & EDGE (X: 430, Width: 330) -->
+  <!-- ========================================== -->
+  <g transform="translate(430, 80)">
+    <rect width="330" height="810" rx="14" fill="#0d1424" stroke="#334155" stroke-width="1.5" />
+    
+    <rect width="330" height="46" rx="14" fill="#172238" />
+    <rect y="36" width="330" height="10" fill="#172238" />
+    <line x1="0" y1="46" x2="330" y2="46" stroke="#334155" stroke-width="1" />
+    <text x="16" y="28" fill="#f8fafc" font-size="13" font-weight="800">STAGE 02: APP CLIENT &amp; EDGE</text>
+    <rect x="235" y="13" width="80" height="20" rx="4" fill="#1e293b" />
+    <text x="275" y="27" fill="#f59e0b" font-size="10" font-weight="700" text-anchor="middle">REACT SPA</text>
+
+    <text x="16" y="70" fill="#94a3b8" font-size="11" font-weight="500">Edge Hosted Single-Page Application</text>
+
+    <!-- Component 1: AWS Amplify Edge CDN -->
+    <g transform="translate(16, 90)">
+      <rect width="298" height="130" rx="10" fill="#131c2e" stroke="#1e293b" stroke-width="1" />
+      <text x="16" y="28" fill="#f59e0b" font-size="11" font-family="monospace" font-weight="700">01. EDGE CDN &amp; HOSTING</text>
+      <text x="16" y="50" fill="#ffffff" font-size="14" font-weight="800">AWS Amplify CI/CD</text>
+      <line x1="16" y1="62" x2="282" y2="62" stroke="#1e293b" stroke-width="1" />
+      <text x="16" y="80" fill="#cbd5e1" font-size="11">• Automated build on GitHub main commit</text>
+      <text x="16" y="96" fill="#cbd5e1" font-size="11">• Sub-40ms global edge static delivery</text>
+      <text x="16" y="112" fill="#cbd5e1" font-size="11">• Enforces HTTPS &amp; TLS 1.3 encryption</text>
+    </g>
+
+    <!-- Component 2: React 19 Client SPA -->
+    <g transform="translate(16, 236)">
+      <rect width="298" height="130" rx="10" fill="#131c2e" stroke="#1e293b" stroke-width="1" />
+      <text x="16" y="28" fill="#f59e0b" font-size="11" font-family="monospace" font-weight="700">02. CLIENT PRESENTATION</text>
+      <text x="16" y="50" fill="#ffffff" font-size="14" font-weight="800">React 19 &amp; Tailwind CSS</text>
+      <line x1="16" y1="62" x2="282" y2="62" stroke="#1e293b" stroke-width="1" />
+      <text x="16" y="80" fill="#cbd5e1" font-size="11">• Zero-latency technical UI layout</text>
+      <text x="16" y="96" fill="#cbd5e1" font-size="11">• Recharts time-series data visualizer</text>
+      <text x="16" y="112" fill="#cbd5e1" font-size="11">• Granular role-aware route guards</text>
+    </g>
+
+    <!-- Component 3: Optimistic State & Dual Cache -->
+    <g transform="translate(16, 382)">
+      <rect width="298" height="130" rx="10" fill="#131c2e" stroke="#1e293b" stroke-width="1" />
+      <text x="16" y="28" fill="#f59e0b" font-size="11" font-family="monospace" font-weight="700">03. RESILIENCE ENGINE</text>
+      <text x="16" y="50" fill="#ffffff" font-size="14" font-weight="800">Dual-Write Offline Cache</text>
+      <line x1="16" y1="62" x2="282" y2="62" stroke="#1e293b" stroke-width="1" />
+      <text x="16" y="80" fill="#cbd5e1" font-size="11">• Instant optimistic UI form updates</text>
+      <text x="16" y="96" fill="#cbd5e1" font-size="11">• Local cache backup during WiFi dropouts</text>
+      <text x="16" y="112" fill="#cbd5e1" font-size="11">• Auto-reconnect background retry queue</text>
+    </g>
+
+    <!-- Component 4: Zod Validation -->
+    <g transform="translate(16, 528)">
+      <rect width="298" height="130" rx="10" fill="#131c2e" stroke="#1e293b" stroke-width="1" />
+      <text x="16" y="28" fill="#f59e0b" font-size="11" font-family="monospace" font-weight="700">04. INPUT SANITIZATION</text>
+      <text x="16" y="50" fill="#ffffff" font-size="14" font-weight="800">Zod Schema Validator</text>
+      <line x1="16" y1="62" x2="282" y2="62" stroke="#1e293b" stroke-width="1" />
+      <text x="16" y="80" fill="#cbd5e1" font-size="11">• Strict client-side payload validation</text>
+      <text x="16" y="96" fill="#cbd5e1" font-size="11">• Rejects malformed form submissions</text>
+      <text x="16" y="112" fill="#cbd5e1" font-size="11">• Cross-site scripting (XSS) prevention</text>
+    </g>
+
+    <g transform="translate(16, 730)">
+      <rect width="298" height="50" rx="8" fill="#131d30" stroke="#1e293b" stroke-width="1" />
+      <text x="14" y="24" fill="#94a3b8" font-size="10" font-weight="700">CLIENT RUNTIME STATUS:</text>
+      <text x="14" y="40" fill="#10b981" font-size="11" font-family="monospace">Zero Secrets Bundled • Anonymous JWT</text>
+    </g>
+  </g>
+
+  <!-- Flow Arrow: Zone 2 to Zone 3 -->
+  <path d="M 760 485 L 810 485" fill="none" stroke="#f59e0b" stroke-width="2.5" marker-end="url(#arrow)" />
+
+  <!-- ========================================== -->
+  <!-- ZONE 03: APPLICATION PROCESSING ENGINES (X: 812, Width: 340) -->
+  <!-- ========================================== -->
+  <g transform="translate(812, 80)">
+    <rect width="340" height="810" rx="14" fill="#0d1424" stroke="#334155" stroke-width="1.5" />
+    
+    <rect width="340" height="46" rx="14" fill="#172238" />
+    <rect y="36" width="340" height="10" fill="#172238" />
+    <line x1="0" y1="46" x2="340" y2="46" stroke="#334155" stroke-width="1" />
+    <text x="16" y="28" fill="#f8fafc" font-size="13" font-weight="800">STAGE 03: APP PROCESSING</text>
+    <rect x="235" y="13" width="90" height="20" rx="4" fill="#1e293b" />
+    <text x="280" y="27" fill="#f59e0b" font-size="10" font-weight="700" text-anchor="middle">MIDDLEWARE</text>
+
+    <text x="16" y="70" fill="#94a3b8" font-size="11" font-weight="500">Decoupled Express &amp; Serverless Engines</text>
+
+    <!-- Engine 1: Auth & Role Guard -->
+    <g transform="translate(16, 90)">
+      <rect width="308" height="130" rx="10" fill="#131c2e" stroke="#1e293b" stroke-width="1" />
+      <text x="16" y="28" fill="#f59e0b" font-size="11" font-family="monospace" font-weight="700">A. IDENTITY &amp; ACCESS</text>
+      <text x="16" y="50" fill="#ffffff" font-size="14" font-weight="800">JWT &amp; Azure SSO Guard</text>
+      <line x1="16" y1="62" x2="292" y2="62" stroke="#1e293b" stroke-width="1" />
+      <text x="16" y="80" fill="#cbd5e1" font-size="11">• Verifies cryptographically signed JWTs</text>
+      <text x="16" y="96" fill="#cbd5e1" font-size="11">• Maps user role to active property cluster</text>
+      <text x="16" y="112" fill="#cbd5e1" font-size="11">• Throttles brute-force login attempts</text>
+    </g>
+
+    <!-- Engine 2: SLA Defect Triage -->
+    <g transform="translate(16, 236)">
+      <rect width="308" height="130" rx="10" fill="#131c2e" stroke="#1e293b" stroke-width="1" />
+      <text x="16" y="28" fill="#f59e0b" font-size="11" font-family="monospace" font-weight="700">B. OPERATIONS DISPATCH</text>
+      <text x="16" y="50" fill="#ffffff" font-size="14" font-weight="800">SLA Triage &amp; Alert Engine</text>
+      <line x1="16" y1="62" x2="292" y2="62" stroke="#1e293b" stroke-width="1" />
+      <text x="16" y="80" fill="#cbd5e1" font-size="11">• Evaluates CAT 1 (4h), CAT 2, CAT 3 SLAs</text>
+      <text x="16" y="96" fill="#cbd5e1" font-size="11">• Dispatches automated contractor SMS/Email</text>
+      <text x="16" y="112" fill="#cbd5e1" font-size="11">• Auto-escalates approaching deadlines</text>
+    </g>
+
+    <!-- Engine 3: Finance State Machine -->
+    <g transform="translate(16, 382)">
+      <rect width="308" height="130" rx="10" fill="#131c2e" stroke="#1e293b" stroke-width="1" />
+      <text x="16" y="28" fill="#f59e0b" font-size="11" font-family="monospace" font-weight="700">C. FINANCE WORKFLOW</text>
+      <text x="16" y="50" fill="#ffffff" font-size="14" font-weight="800">Approval State Machine</text>
+      <line x1="16" y1="62" x2="292" y2="62" stroke="#1e293b" stroke-width="1" />
+      <text x="16" y="80" fill="#cbd5e1" font-size="11">• 3-Way matching (Invoice + Receipt + PO)</text>
+      <text x="16" y="96" fill="#cbd5e1" font-size="11">• Deterministic multi-tier approval routing</text>
+      <text x="16" y="112" fill="#cbd5e1" font-size="11">• Prevents duplicate vendor payment claims</text>
+    </g>
+
+    <!-- Engine 4: Dynamic Adapter & Docs -->
+    <g transform="translate(16, 528)">
+      <rect width="308" height="130" rx="10" fill="#131c2e" stroke="#1e293b" stroke-width="1" />
+      <text x="16" y="28" fill="#f59e0b" font-size="11" font-family="monospace" font-weight="700">D. EXTENSIBILITY &amp; DOCS</text>
+      <text x="16" y="50" fill="#ffffff" font-size="14" font-weight="800">Dynamic Adapter &amp; DocGen</text>
+      <line x1="16" y1="62" x2="292" y2="62" stroke="#1e293b" stroke-width="1" />
+      <text x="16" y="80" fill="#cbd5e1" font-size="11">• Adapts runtime custom fields dynamically</text>
+      <text x="16" y="96" fill="#cbd5e1" font-size="11">• Compiles Word (.docx) &amp; PDF reports</text>
+      <text x="16" y="112" fill="#cbd5e1" font-size="11">• Formats statutory Home Office incident files</text>
+    </g>
+
+    <g transform="translate(16, 730)">
+      <rect width="308" height="50" rx="8" fill="#131d30" stroke="#1e293b" stroke-width="1" />
+      <text x="14" y="24" fill="#94a3b8" font-size="10" font-weight="700">APPLICATION ADAPTER HEALTH:</text>
+      <text x="14" y="40" fill="#10b981" font-size="11" font-family="monospace">/api/health • 49 Automated Tests Verified</text>
+    </g>
+  </g>
+
+  <!-- Flow Arrow: Zone 3 to Zone 4 -->
+  <path d="M 1152 485 L 1202 485" fill="none" stroke="#10b981" stroke-width="2.5" marker-end="url(#arrowGreen)" />
+
+  <!-- ========================================== -->
+  <!-- ZONE 04: ENTERPRISE DATA & VAULT TIER (X: 1204, Width: 348) -->
+  <!-- ========================================== -->
+  <g transform="translate(1204, 80)">
+    <rect width="348" height="810" rx="14" fill="#0d1424" stroke="#334155" stroke-width="1.5" />
+    
+    <rect width="348" height="46" rx="14" fill="#172238" />
+    <rect y="36" width="348" height="10" fill="#172238" />
+    <line x1="0" y1="46" x2="348" y2="46" stroke="#334155" stroke-width="1" />
+    <text x="16" y="28" fill="#f8fafc" font-size="13" font-weight="800">STAGE 04: SECURE DATA TIER</text>
+    <rect x="235" y="13" width="98" height="20" rx="4" fill="#1e293b" />
+    <text x="284" y="27" fill="#10b981" font-size="10" font-weight="700" text-anchor="middle">CLOUD VAULT</text>
+
+    <text x="16" y="70" fill="#94a3b8" font-size="11" font-weight="500">ACID Relational Storage &amp; Encryption</text>
+
+    <!-- Data Store 1: PostgreSQL RLS -->
+    <g transform="translate(16, 90)">
+      <rect width="316" height="130" rx="10" fill="#131c2e" stroke="#1e293b" stroke-width="1" />
+      <text x="16" y="28" fill="#10b981" font-size="11" font-family="monospace" font-weight="700">SECURITY GATE</text>
+      <text x="16" y="50" fill="#ffffff" font-size="14" font-weight="800">Row-Level Security (RLS)</text>
+      <line x1="16" y1="62" x2="300" y2="62" stroke="#1e293b" stroke-width="1" />
+      <text x="16" y="80" fill="#cbd5e1" font-size="11">• Database engine evaluates auth.uid()</text>
+      <text x="16" y="96" fill="#cbd5e1" font-size="11">• Strict multi-tenant property isolation</text>
+      <text x="16" y="112" fill="#cbd5e1" font-size="11">• Zero cross-facility data leakage</text>
+    </g>
+
+    <!-- Data Store 2: Domain Entity Stores -->
+    <g transform="translate(16, 236)">
+      <rect width="316" height="130" rx="10" fill="#131c2e" stroke="#1e293b" stroke-width="1" />
+      <text x="16" y="28" fill="#10b981" font-size="11" font-family="monospace" font-weight="700">CORE STORAGE</text>
+      <text x="16" y="50" fill="#ffffff" font-size="14" font-weight="800">Relational Domain Entities</text>
+      <line x1="16" y1="62" x2="300" y2="62" stroke="#1e293b" stroke-width="1" />
+      <text x="16" y="80" fill="#cbd5e1" font-size="11">• Property &amp; Room Bed Inventory</text>
+      <text x="16" y="96" fill="#cbd5e1" font-size="11">• Vulnerable Service-User Profiles</text>
+      <text x="16" y="112" fill="#cbd5e1" font-size="11">• Household &amp; Family Kinship Graph</text>
+    </g>
+
+    <!-- Data Store 3: Immutable Audit Stream -->
+    <g transform="translate(16, 382)">
+      <rect width="316" height="130" rx="10" fill="#131c2e" stroke="#1e293b" stroke-width="1" />
+      <text x="16" y="28" fill="#10b981" font-size="11" font-family="monospace" font-weight="700">COMPLIANCE LEDGER</text>
+      <text x="16" y="50" fill="#ffffff" font-size="14" font-weight="800">Immutable Audit Stream</text>
+      <line x1="16" y1="62" x2="300" y2="62" stroke="#1e293b" stroke-width="1" />
+      <text x="16" y="80" fill="#cbd5e1" font-size="11">• Append-only cryptographic ledger</text>
+      <text x="16" y="96" fill="#cbd5e1" font-size="11">• Records every state mutation &amp; role change</text>
+      <text x="16" y="112" fill="#cbd5e1" font-size="11">• Tamper-proof history for statutory audits</text>
+    </g>
+
+    <!-- Data Store 4: Object Storage Vault -->
+    <g transform="translate(16, 528)">
+      <rect width="316" height="130" rx="10" fill="#131c2e" stroke="#1e293b" stroke-width="1" />
+      <text x="16" y="28" fill="#10b981" font-size="11" font-family="monospace" font-weight="700">DOCUMENT VAULT</text>
+      <text x="16" y="50" fill="#ffffff" font-size="14" font-weight="800">Encrypted Evidence Vault</text>
+      <line x1="16" y1="62" x2="300" y2="62" stroke="#1e293b" stroke-width="1" />
+      <text x="16" y="80" fill="#cbd5e1" font-size="11">• Photographic maintenance evidence</text>
+      <text x="16" y="96" fill="#cbd5e1" font-size="11">• Statutory certificates (Gas, FRA, Legionella)</text>
+      <text x="16" y="112" fill="#cbd5e1" font-size="11">• Time-limited signed URL access only</text>
+    </g>
+
+    <g transform="translate(16, 730)">
+      <rect width="316" height="50" rx="8" fill="#131d30" stroke="#1e293b" stroke-width="1" />
+      <text x="14" y="24" fill="#94a3b8" font-size="10" font-weight="700">DATABASE BACKUP &amp; RECOVERY:</text>
+      <text x="14" y="40" fill="#10b981" font-size="11" font-family="monospace">PITR Enabled • RPO ≤ 1h • RTO ≤ 2h</text>
+    </g>
+  </g>
+</svg>
